@@ -65,7 +65,7 @@ function drawTree(x, y, scl = 1) {
   triangle(-22, -47, 22, -47, 0, -85);     // triangolo 2 neve dalla punta
 
   fill(25, 55, 45);
-  triangle(-18, -65, 18, -65, 0, -98);     // triangolo 1 (cima) verde, più piccolo
+  triangle(-18, -65, 18, -65, 0, -98);     // triangolo 1 (cima) verde, piu piccolo
   fill(150, 165, 195);
   triangle(-14, -73, 14, -73, 0, -98);     // triangolo 1 neve dalla punta
 
@@ -158,6 +158,9 @@ function draw() {
   pop();
 
   yFumo = yFumo + 0.4;
+  if(yFumo >= 180) {
+    yFumo = 0;
+  }
   for (let i = 0; i < 6; i++) { //uscita fumo
     let salita = (yFumo + i * 30) % 180;
     fill(100, 100, 110, 170 - salita * 0.8);
