@@ -5,14 +5,14 @@ let yNeve = 0;
 
 function drawWindow(x, y) {
   fill(45, 30, 20);
-  rect(x, y, 44, 44); // telaio della finestra
+  rect(x, y, 44, 44); //telaio della finestra
 
   fill(255, 210, 100);
-  rect(x, y, 36, 36); // vetro con la luce accesa
+  rect(x, y, 36, 36); //vetro con la luce accesa
 
   fill(45, 30, 20);
-  rect(x, y, 36, 3); // traversa orizzontale
-  rect(x, y, 3, 36); // traversa verticale
+  rect(x, y, 36, 3); //traversa orizzontale
+  rect(x, y, 3, 36); //traversa verticale
 }
 
 function drawHouse(x, y, scl = 1) {
@@ -22,21 +22,21 @@ function drawHouse(x, y, scl = 1) {
   rectMode(CENTER);
 
   fill(85, 60, 60);
-  rect(52, -90, 20, 50); // comignolo
+  rect(52, -90, 20, 50); //comignolo
 
   fill(140, 115, 100);
-  rect(0, 0, 160, 100); // casa
+  rect(0, 0, 160, 100); //casa
 
   fill(90, 35, 40);
-  triangle(-90, -50, 90, -50, 0, -120); // tetto
+  triangle(-90, -50, 90, -50, 0, -120); //tetto
   fill(140, 155, 190);
   triangle(-45, -85, 45, -85, 0, -120);
 
   fill(60, 40, 25);
-  rect(0, 25, 30, 50); // porta
+  rect(0, 25, 30, 50); //porta
 
-  drawWindow(-42, -12); // finestra a sinistra
-  drawWindow(42, -12);  // finestra a destra
+  drawWindow(-42, -12); //finestra a sinistra
+  drawWindow(42, -12);  //finestra a destra
 
   fill(255, 210, 100, 50); //glow delle finestre
   ellipse(-42, -12, 55);
@@ -52,22 +52,22 @@ function drawTree(x, y, scl = 1) {
   rectMode(CENTER);
 
   fill(60, 40, 25);
-  rect(0, 0, 10, 30);                      // tronco
+  rect(0, 0, 10, 30); //tronco
 
   fill(25, 55, 45);
-  triangle(-38, -5, 38, -5, 0, -60);       // triangolo 3 (basso) verde
+  triangle(-38, -5, 38, -5, 0, -60); //triangolo 3 (basso) verde
   fill(150, 165, 195);
-  triangle(-32, -15, 32, -15, 0, -60);     // triangolo 3 neve dalla punta
+  triangle(-32, -15, 32, -15, 0, -60); //triangolo 3 neve dalla punta
 
   fill(25, 55, 45);
-  triangle(-28, -35, 28, -35, 0, -85);     // triangolo 2 (medio) verde
+  triangle(-28, -35, 28, -35, 0, -85); //triangolo 2 (medio) verde
   fill(150, 165, 195);
-  triangle(-22, -47, 22, -47, 0, -85);     // triangolo 2 neve dalla punta
+  triangle(-22, -47, 22, -47, 0, -85); //triangolo 2 neve dalla punta
 
   fill(25, 55, 45);
-  triangle(-18, -65, 18, -65, 0, -98);     // triangolo 1 (cima) verde, piu piccolo
+  triangle(-18, -65, 18, -65, 0, -98); //triangolo 1 (cima) verde, piu piccolo
   fill(150, 165, 195);
-  triangle(-14, -73, 14, -73, 0, -98);     // triangolo 1 neve dalla punta
+  triangle(-14, -73, 14, -73, 0, -98); //triangolo 1 neve dalla punta
 
   pop();
 }
@@ -95,23 +95,23 @@ function drawSnowman(x, y, scl = 1) {
   translate(15, -46);
   rotate(-35);
   fill(80, 55, 35);
-  rect(0, -2, 28, 4);   // braccio dx
+  rect(0, -2, 28, 4); //braccio dx
   pop();
 
   push();
   translate(-15, -46);
   rotate(190);
   fill(80, 55, 35);
-  rect(0, -2, 30, 4);   // braccio sx
+  rect(0, -2, 30, 4); //braccio sx
   pop();
 
   fill(205, 215, 235);
-  ellipse(0, 0, 60);      // corpo in basso
-  ellipse(0, -42, 44);   // corpo centrale
-  ellipse(0, -74, 30);   // testa
+  ellipse(0, 0, 60); //corpo in basso
+  ellipse(0, -42, 44); //corpo centrale
+  ellipse(0, -74, 30); //testa
 
   fill(240, 130, 40);
-  triangle(0, -76, 0, -71, 14, -73.5) //naso 
+  triangle(0, -76, 0, -71, 14, -73.5); //naso 
 
   pop();
 }
@@ -123,7 +123,7 @@ function setup() {
 }
 
 function draw() {
-  background("#0B1226"); // cielo di notte
+  background("#0B1226"); //cielo di notte
 
   noStroke();
 
@@ -178,6 +178,6 @@ function draw() {
     let deriva = 0.1 + (i % 4) * 0.1;
     let x = (i * i * 6 + (i % 7) * 23 + yNeve * velocita * deriva) % xMax; 
     let y = (i * 18 + yNeve * velocita) % yMax;
-    ellipse(x, y, grandezza)
+    ellipse(x, y, grandezza);
   }
 }
