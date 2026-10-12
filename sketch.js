@@ -131,9 +131,9 @@ function draw() {
   drawCloud(187, 93, 0.8);
   drawCloud(323, 26, 1.3);
   drawCloud(460, 105, 0.8); //nuvola sopra la casa
-  drawCloud(570, 37, 1.2);
+  drawCloud(575, 37, 1.2);
   drawCloud(680, 130, 1.3);
-  drawCloud(88, 130, 0.5);
+  drawCloud(82, 130, 0.6);
   drawCloud(320, 140, 1);
   
 
