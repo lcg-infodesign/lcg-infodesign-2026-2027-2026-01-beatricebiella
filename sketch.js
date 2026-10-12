@@ -17,6 +17,7 @@ function drawWindow(x, y) {
 
 function drawHouse(x, y, scl = 1) {
   push();
+
   translate(x, y);
   scale(scl);
   rectMode(CENTER);
@@ -47,6 +48,7 @@ function drawHouse(x, y, scl = 1) {
 
 function drawTree(x, y, scl = 1) {
   push();
+
   translate(x, y);
   scale(scl);
   rectMode(CENTER);
@@ -74,6 +76,7 @@ function drawTree(x, y, scl = 1) {
 
 function drawCloud(x, y, scl = 1) {
   push();
+
   translate(x, y);
   scale(scl);
 
@@ -88,21 +91,26 @@ function drawCloud(x, y, scl = 1) {
 
 function drawSnowman(x, y, scl = 1) {
   push();
+
   translate(x, y);
   scale(scl);
 
   push();
+
   translate(15, -46);
   rotate(-35);
   fill(80, 55, 35);
   rect(0, -2, 28, 4); //braccio dx
+
   pop();
 
   push();
+
   translate(-15, -46);
   rotate(190);
   fill(80, 55, 35);
   rect(0, -2, 30, 4); //braccio sx
+
   pop();
 
   fill(205, 215, 235);
@@ -111,7 +119,7 @@ function drawSnowman(x, y, scl = 1) {
   ellipse(0, -74, 30); //testa
 
   fill(240, 130, 40);
-  triangle(0, -76, 0, -71, 14, -73.5); //naso 
+  triangle(0, -76, 0, -71, 14, -73.5); //naso
 
   pop();
 }
@@ -138,7 +146,7 @@ function draw() {
   
 
   fill(170, 185, 215);
-  rect(0, yMax * 0.7, xMax, yMax * 0.3); // terreno innevato
+  rect(0, yMax * 0.7, xMax, yMax * 0.3); //terreno innevato
 
   drawTree(360, 420, 0.6); //albero vicino casa sx
   drawTree(290, 450, 1); 
@@ -149,12 +157,14 @@ function draw() {
   drawTree(30, 530, 1.4);
   drawTree(610, 550, 1.7); //albero davanti dx
   drawTree(237, 560, 1.7); //albero davanti sx
+
   push();
 
   translate(xMax * 0.64, 455);
   rotate(35);
   fill(140, 155, 190);
-  rect(6.6, 0, 35, 170); //stradina
+  rect(6.5, 0, 35, 180); //stradina
+
   pop();
 
   yFumo = yFumo + 0.4;
