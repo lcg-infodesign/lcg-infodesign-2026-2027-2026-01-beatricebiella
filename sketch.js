@@ -127,13 +127,13 @@ function draw() {
 
   noStroke();
 
-  drawCloud(40, 56, 1.1); //in ordine da sx a dx
+  drawCloud(40, 48, 1.1); //in ordine da sx a dx
   drawCloud(187, 93, 0.8);
   drawCloud(323, 26, 1.3);
-  drawCloud(460, 105, 0.8); //nuvola sopra la casa
+  drawCloud(463, 105, 0.9); //nuvola sopra la casa
   drawCloud(575, 37, 1.2);
   drawCloud(680, 130, 1.3);
-  drawCloud(82, 130, 0.6);
+  drawCloud(82, 135, 0.6);
   drawCloud(320, 140, 1);
   
 
